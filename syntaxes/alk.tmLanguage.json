@@ -1,0 +1,130 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ALK",
+	"scopeName": "source.alk",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#preproc"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#variables"
+		}
+		
+	],
+	"repository": {
+		"comments": {
+			"patterns": 
+			[
+				{
+					"name": "comment.line.double-slash.alk",
+					"begin": "//",
+					"end": "$"
+				},
+				{
+					"name": "comment.block.alk",
+					"begin": "\/\\*",
+					"end": "\\*\/"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": 
+			[
+				{
+					"name": "keyword.operator.acces.alk",
+					"match": "(->|\\.)"
+				},
+				{
+					"name": "keyword.operator.range.alk",
+					"match": "(-?\\d+\\.?\\d*)\\.\\.(-?\\d+\\.?\\d*)"
+				},
+				{
+					"name": "keyword.control.alk",
+					"match": "\\b(if|while|for|return|break|choose|continue|do|else|foreach|from|failure|modifies|out|repeat|return|s\\.t\\.|success|uniform|until)\\b"
+				},
+				{
+					"name": "keyword.operator.alk",
+					"match": "(\\+|-|\\*|\\/|%|=|xor|&&|\\|\\|in|\\||&|<<|>>|U|\\^|<=?|>=?|==|!=)"
+				}
+			]
+		},
+		"constants": {
+			"patterns": 
+			[
+				{
+					"name": "constant.numeric.alk",
+					"match": "-?\\d+\\.?\\d*"
+				},
+				{
+					"name": "constant.language.alk",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.alk",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.alk",
+					"match": "\\\\."
+				}
+			]
+		},
+		"functions": {
+			"patterns": 
+			[
+				{
+					"name": "entity.name.function.alk",
+					"match": "[A-Za-z_][A-Za-z_0-9]*(\\(.*?\\))",
+					"captures": {
+						"1":{
+							"patterns": [
+								{
+									"include": "#keywords"
+								},
+								{
+									"include": "#variables"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"variables": {
+			"patterns": 
+			[
+				{
+					"name": "variable.alk",
+					"match": "\\b[A-Za-z_][A-Za-z_0-9]*\\b"	
+				}
+			]
+		},
+		"preproc": {
+			"patterns": 
+			[
+				{
+					"name": "keyword.control.alk",
+					"match": "#include"	
+				}
+			]
+		}
+	}
+}
