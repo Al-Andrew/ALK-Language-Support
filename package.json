@@ -3,6 +3,7 @@
     "displayName": "Alk Language Support",
     "description": "Highlighting support for the ALK programming language",
     "version": "0.0.1",
+    "publisher": "AldeaAndrei",
     "engines": {
         "vscode": "^1.53.0"
     },
