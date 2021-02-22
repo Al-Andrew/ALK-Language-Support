@@ -2,8 +2,12 @@
 
 All notable changes to the "alk-language-support" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## Content release 1
 
-- Initial release
+- Fixed a bug, where functions were't colored properly inside if/for/while... blocks
+- Added a logo. Thanks to https://github.com/ntheodorg
+
+## Initial Release
+
+- Simple syntax highlighting

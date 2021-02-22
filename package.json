@@ -2,8 +2,10 @@
     "name": "alk-language-support",
     "displayName": "Alk Language Support",
     "description": "Highlighting support for the ALK programming language",
-    "version": "0.0.1",
+    "icon": "assets/ALK_LOGO.png",
+    "version": "0.0.2",
     "publisher": "AldeaAndrei",
+    "repository": {"url": "https://github.com/Al-Andrew/ALK-Language-Support"},
     "engines": {
         "vscode": "^1.53.0"
     },
