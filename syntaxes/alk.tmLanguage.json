@@ -10,10 +10,10 @@
 			"include": "#preproc"
 		},
 		{
-			"include": "#functions"
+			"include": "#keywords"
 		},
 		{
-			"include": "#keywords"
+			"include": "#functions"
 		},
 		{
 			"include": "#strings"
